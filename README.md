@@ -10,6 +10,9 @@ Submitted by: **Ivan Wang**
 
 Here's a walkthrough of implemented user stories:
 
+
+<img width="1440" alt="Screen Shot 2022-02-05 at 1 16 35 AM" src="https://user-images.githubusercontent.com/33285345/152631082-0b937c37-478f-4a77-9868-28f62a28feb8.png">
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/33285345/149677789-073cbc0d-5b51-47b0-9d08-140937a7b3e4.gif)
 
 
@@ -17,10 +20,6 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-**Describe any challenges encountered while building the app.**
-
-Since this was my first time using Xcode and Swift, I encountered 
-some problems finding tools to help me complete this application.
 
 ## License
 
