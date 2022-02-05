@@ -8,14 +8,14 @@ Submitted by: **Ivan Wang**
 
 ## Images
 
-Here's a walkthrough of implemented user stories:
-
 
 <img width="1440" alt="Screen Shot 2022-02-05 at 1 16 35 AM" src="https://user-images.githubusercontent.com/33285345/152631082-0b937c37-478f-4a77-9868-28f62a28feb8.png">
 
 <img width="1440" alt="Screen Shot 2022-02-05 at 1 19 14 AM" src="https://user-images.githubusercontent.com/33285345/152631142-e3c30c47-6b7e-4783-bec4-1e6215b1edab.png">
 
 ## Video Walkthrough
+
+Here's a walkthrough of the VR World:
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/33285345/149677789-073cbc0d-5b51-47b0-9d08-140937a7b3e4.gif)
 
