@@ -17,7 +17,7 @@ Submitted by: **Ivan Wang**
 
 Here's a walkthrough of the VR World:
 
-<img src="http://g.recordit.co/ioAbNb5QuI.gif">
+<img width="1440" alt="Screen Shot 2022-02-05 at 1 16 35 AM" src="http://g.recordit.co/ioAbNb5QuI.gif">
 
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
