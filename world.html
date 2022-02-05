@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  </head>
+ <body onload="init()">
+    <script src="script.js"></script>
+    <script src="vol.js"></script>
+    <script src="green.js"></script>
+    <script src="cloud.js"></script>
+    <script src="smoke.js"></script>
+    <script src="light.js"></script>
+
+    <a-scene id="scene">
+
+      <a-assets>
+    <a-asset-item id="dino" src="dinosaur/scene.gltf"></a-asset-item>
+    <a-asset-item id="trice" src="triceratops/scene.gltf"></a-asset-item>
+    <a-asset-item id="skull" src="skell/scene.gltf"></a-asset-item>
+      </a-assets>
+
+    <a-entity gltf-model ="#dino" scale="1 1 1" rotation="0 90 0" position="225 30 -17"></a-entity>
+    <a-entity gltf-model ="#trice" scale="12 12 12" rotation="0 90 0" position="-120 0 -50"></a-entity>
+    <a-entity gltf-model ="#skull" scale="50 50 50" rotation="0 180 0" position="47.5 0 -210"></a-entity>
+
+
+
+    <a-camera pointer-lock-enabled="true" position="40 8 100" camera look-controls wasd-controls = "acceleration: 100; fly: true">
+        <a-cursor></a-cursor>
+      </a-camera>
+
+    <!--<a-gltf-model src="#dino" position="-.5 -1 -2 " rotation="0 90 0" scale="50 50 50"></a-gltf-model>-->
+
+    <a-sky id="ski" material="src:images/sky.jpg; repeat: 2 2;" color="orange"> </a-sky>
+
+
+    <a-plane material="src:images/water.jpg; repeat: 10 10;" width="500" height="500" 
+    position="42 -1 -55" rotation="-90 0 0"> </a-plane>
+
+
+    <a-box material="src:images/grass.jpg; repeat: 10 10;" width="180" height="180" position="42 0 -55" rotation="-90 0 0"> </a-box>
+
+    <a-box material="src:images/dirt.jpg; repeat: 10 10;" width="80" height="30" 
+    position="-130 0 -55" rotation="-90 0 0"> </a-box>
+
+    <a-box material="src:images/bridge.jpg; repeat: 10 10;" width="50" height="10" 
+    position="-69 0.7 -55" rotation="-90 0 0"> </a-box>    
+
+
+    <a-box material="src:images/dirt.jpg; repeat: 10 10;" width="80" height="30" 
+    position="215 0 -55" rotation="-90 0 0"> </a-box>
+
+    <a-box material="src:images/bridge.jpg; repeat: 10 10;" width="50" height="10" 
+    position="153 0.7 -55" rotation="-90 0 0"> </a-box>    
+
+
+    <a-box material="src:images/dirt.jpg; repeat: 10 10;" width="80" height="30" 
+    position="40 0 -210" rotation="-90 0 0"> </a-box>    
+
+    <a-box material="src:images/bridge.jpg; repeat: 10 10;" width="60" height="10" 
+    position="40 0.7 -169" rotation="-90 90 0"> </a-box>    
+
+
+
+    <a-box material="src:images/dirt.jpg; repeat: 10 10;" width="40" height="30" 
+    position="40 0 100" rotation="-90 0 0"> </a-box>    
+
+
+    <a-box material="src:images/bridge.jpg; repeat: 10 10;" width="60" height="10" 
+    position="40 0.7 57.5" rotation="-90 90 0"> </a-box>    
+
+
+
+    <a-entity rotation="0 0 0" animation="property: position; to: 0 -170 90; loop: true; dur: 10000">
+
+    <a-sphere id = "astro" material="src:images/big_rock.jpg; repeat: 10 10;" animation="property: rotation" position="40 150 -130" radius="25"></a-sphere>
+
+    <a-sphere id = "big" material="src:images/big_rock.jpg; repeat: 10 10;" 
+    animation="property: rotation" position="40 180 -130" radius="12"></a-sphere>
+    
+    <a-sphere id = "ast" material="src:images/big_rock.jpg; repeat: 10 10;" 
+    animation="property: rotation" position="0 180 -160" radius="16"></a-sphere>
+
+    <a-sphere id = "astr" material="src:images/big_rock.jpg; repeat: 10 10;" 
+    animation="property: rotation" position="-20 120 -130" radius="15"></a-sphere>
+
+    <a-sphere id = "as" material="src:images/big_rock.jpg; repeat: 10 10;" 
+    animation="property: rotation" position="92 120 -130" radius="23"></a-sphere>  
+    </a-entity>
+
+    <!--<a-entity id="light"> 
+    <a-sphere src = "sun.jpg" position="0 400 500" 
+    radius="200"></a-sphere>
+    <a-light type="ambient" color="yellow" position="0 400 500"></a-light></a-entity>-->
+
+
+
+    <!--<a-light type="point" color="#cf1020" position="42 17 -55"></a-light>-->
+
+    <a-light type="point" color="#blue" position="42 -1 -55"></a-light>
+
+
+  <a-video src="sound.mp4" position="42 17 -55"></a-video>
+
+    <a-sound id = "dino" class = "sfx" src = "src: url(mtrex.wav)"> </a-sound>
+
+
+    </a-scene>
+  </body>
+  <script>
+
+    document
+      .querySelector("#astro")
+      .addEventListener("click", e=> {
+      astro.setAttribute("visible", false)
+    });
+    document
+      .querySelector("#big")
+      .addEventListener("click", e=> {
+      big.setAttribute("visible", false)
+    });
+    document
+      .querySelector("#ast")
+      .addEventListener("click", e=> {
+      ast.setAttribute("visible", false)
+    })
+    document
+      .querySelector("#astr")
+      .addEventListener("click", e=> {
+      astr.setAttribute("visible", false)
+    });
+    document
+      .querySelector("#as")
+      .addEventListener("click", e=> {
+      as.setAttribute("visible", false)
+    });
+
+</script>
+</html>
+

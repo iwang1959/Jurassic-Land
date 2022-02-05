@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-camera position = "40 5 100" camera look-controls wasd-controls = 
+      "acceleration: 2; fly: true">
+<a-cursor></a-cursor></a-camera>
+
+      <a-sky material="src:images/bg.jpg; repeat: 5 5;"> </a-sky>
+
+      <a-entity position="40 8 95">
+
+      <!--<a-box img src="Jurassic-Land.png" position="40 6 95" height = "1.5" width="3.5">-->
+
+      <a-box img src = "images/Jurassic-Land.png" position="0 0 0.2" rotation="88 0 0" width="8" height="0.1"></a-box>
+
+      <a-box id = "play" img src = "images/Play-game.png" position="0 -2 0.2" rotation="88 0 0" 
+      width="2" height="0.001"></a-box>
+
+      <a-box id = "mode" img src = "images/Experience-Mode.png" position="0 -3.5 0.2" rotation="88 0 0" 
+      width="3" height="0.001"></a-box>
+
+      <a-box id = "info" img src = "images/Information.png" position="0 -5 0.2" rotation="88 0 0" 
+      width="2.5" height="0.0001"></a-box>
+
+
+      <a-sound src="src: url(theme.mp3)" autoplay="true" loop="true"></a-sound>
+
+
+
+
+
+
+
+    </a-scene>
+  </body>
+  <script>
+    document
+      .querySelector("#play")
+      .addEventListener("click", e=> {
+      location.href = "level.html"
+      });
+
+    document
+      .querySelector("#play")
+      .addEventListener("mouseenter", e=> {
+      play.setAttribute("color", "red");
+      });
+    document
+      .querySelector("#play")
+      .addEventListener("mouseleave", e=> {
+      play.setAttribute("color", "white");
+    });
+
+
+    document
+      .querySelector("#mode")
+      .addEventListener("click", e=> {
+      location.href = "world.html"
+      });
+
+    document
+      .querySelector("#mode")
+      .addEventListener("mouseenter", e=> {
+      mode.setAttribute("color", "red");
+      });
+    document
+      .querySelector("#mode")
+      .addEventListener("mouseleave", e=> {
+      mode.setAttribute("color", "white");
+    });
+
+
+    document
+      .querySelector("#info")
+      .addEventListener("click", e=> {
+      location.href = "info.html"
+      });
+
+    document
+      .querySelector("#info")
+      .addEventListener("mouseenter", e=> {
+      info.setAttribute("color", "red");
+      });
+    document
+      .querySelector("#info")
+      .addEventListener("mouseleave", e=> {
+      info.setAttribute("color", "white");
+    });
+  </script>
+</html>

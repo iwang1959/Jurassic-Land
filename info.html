@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="script.js"></script>
+    <!-- Model Resources
+      https://supermedium.com/aframe-environment-component/ 
+      https://aframe.io/docs/1.0.0/introduction/models.html
+      https://www.khronos.org/gltf/
+      https://github.com/KhronosGroup/glTF-Sample-Models
+      https://github.com/donmccurdy/aframe-extras
+      https://github.com/supermedium/aframe-environment-component
+    -->
+  </head>
+  <body>
+    <a-scene>
+    <a-camera position = "0 2 0" camera look-controls wasd-controls = 
+      "acceleration: 20; fly: false">
+      <a-cursor>
+        <a-text value="More dinosaurs and information coming soon.
+        
+         Hover cursor over these dinosaur models to see motion and information(it might take a while)." position = "-8 7 -8"></a-text>
+        </a-cursor></a-camera>
+
+      <a-assets>
+
+        <a-assets-item id="spino" src = "spinosaurus/scene.gltf"></a-assets-item>
+
+        <a-assets-item id="trex" src = "tyrannosaurus_rex/scene.gltf"></a-assets-item>
+
+        <a-assets-item id="suchom" src = "suchominus/scene.gltf"></a-assets-item>
+      </a-assets>
+
+      <a-entity position = "0 0 0">
+      <a-gltf-model id = "tran" src="#trex" position = "0 1.45 -20"></a-gltf-model>
+      <a-cone id="con" radius-bottom="3" radius-top= "1.4" position = "0 0 -20" height= "3" color= "gray"></a-cone>
+      <a-text id = "rex_text" value="Tyrannosaurus Rex" position = "-1 1 -18.1"></a-text>
+      <a-text id = "rex_info" value="Tyrannosaurus is a genus of coelurosaurian theropod dinosaur. The species Tyrannosaurus rex, often called T. rex or colloquially T-Rex, is one of the most well-represented of these large theropods.
+Eaten by: Tyrannosaurus
+Height: 12 – 20 ft.
+Lived: 83.6 million years ago - 66 million years ago (Cretaceous)
+Extinct in: Cretaceous–Paleogene extinction event
+Eats: Triceratops, Edmontosaurus, Corythosaurus, Tyrannosaurus" 
+
+position = "3 5 -18" visible = false></a-text>
+
+
+
+      <a-gltf-model id = "spin" src="#spino" position = "-16 1.45 -11.5"></a-gltf-model>
+      <a-cone id="cone"radius-bottom="3" radius-top= "1.4" position = "-13 0 -10" height= "3" color= "gray"></a-cone>
+      <a-text id = "spino_text" value="spinosaurus" position = "-13.7 1 -8.1"></a-text>
+      <a-text id = "spino_info" value="Spinosaurus is a genus of spinosaurid dinosaur that lived in what now is North Africa during the Cenomanian to upper Turonian stages of the Late Cretaceous period, about 99 to 93.5 million years ago. 
+Height: 14 – 23 ft.
+Lived: 112.03 million years ago - 72.1 million years ago (Albian - Campanian)
+Extinct in: Cretaceous–Paleogene extinction event
+Mass: 14,000 – 17,000 lbs
+Fossils: BSP 1912 VIII 19, NMC 50791, UCPC-2, BM231, MNHN SAM 124
+Eats: Onchopristis, Mawsonia"
+
+ position = "-8 5 -8" visible = false></a-text>
+
+
+      <a-gltf-model id = "such" src="#suchom" scale="0.009 0.009 0.009" position = "13 1.45 -10"></a-gltf-model>
+      <a-cone id="conee"radius-bottom="3" radius-top= "1.4" position = "13 0 -10" height= "3" color= "gray"></a-cone>
+      <a-text id = "suchom_text" value="suchominus" position = "12.5 1 -8"></a-text>
+      <a-text id = "suchom_info" value="Suchomimus is a genus of spinosaurid dinosaur that lived between 125 and 112 million years ago in what is now Niger, during the Aptian to early Albian stages of the Early Cretaceous period.
+Lived: 125 million years ago - 100.5 million years ago (Aptian - Albian)
+Higher classification: Baryonychinae
+Extinction status: Extinct Encyclopedia of Life
+Scientific name: Suchomimus (Crocodile mimic)
+Rank: Genus
+Fossils: MNN GDF 500, MNN GDF 503, MNN GDF 504, MNN GDF 502, MNN GDF 501" 
+
+position = "16 5 -10" visible = false></a-text>
+
+
+
+
+      </a-entity>
+
+
+      <!--<a-gltf-model src="#man" position = "0 0 -5" animation-mixer></a-gltf-model>
+
+      <a-gltf-model src="#bal" position = "0 10 -5" animation-mixer></a-gltf-model>-->
+
+      <a-entity environment = "preset:default"></a-entity>
+
+    </a-scene>
+  </body>
+  <script>
+    let cone1 = document.querySelector("#con");
+    let trex_text = document.querySelector("#rex_text");
+    let rex_info = document.querySelector("#rex_info");
+    let trex = document.querySelector("#tran");
+
+    cone1.addEventListener("mouseenter", e=> {
+      rex_info.setAttribute("visible", true)
+    });
+    trex_text.addEventListener("mouseenter", e=> {
+      rex_info.setAttribute("visible", true)
+    });
+    trex.addEventListener("mouseenter", e=> {
+      rex_info.setAttribute("visible", true)
+      trex.setAttribute("animation-mixer", "")
+    });
+    
+
+    let cone2 = document.querySelector("#cone");
+    let spino_text = document.querySelector("#spino_text");
+    let spino_info = document.querySelector("#spino_info");
+    let spino = document.querySelector("#spin");
+
+    cone2.addEventListener("mouseenter", e=> {
+      spino_info.setAttribute("visible", true)
+    });
+    spino_text.addEventListener("mouseenter", e=> {
+      spino_info.setAttribute("visible", true)
+    });
+    spino.addEventListener("mouseenter", e=> {
+      spino_info.setAttribute("visible", true)
+      spino.setAttribute("animation-mixer", "")
+    });
+
+
+    let cone3 = document.querySelector("#conee");
+    let suchom_text = document.querySelector("#suchom_text");
+    let suchom_info = document.querySelector("#suchom_info");
+    let suchom = document.querySelector("#such");
+
+    cone3.addEventListener("mouseenter", e=> {
+      suchom_info.setAttribute("visible", true)
+    });
+    suchom_text.addEventListener("mouseenter", e=> {
+      suchom_info.setAttribute("visible", true)
+    });
+    suchom.addEventListener("mouseenter", e=> {
+      suchom_info.setAttribute("visible", true)
+      suchom.setAttribute("animation-mixer", "")
+    });
+
+
+
+    </script> 
+</html>

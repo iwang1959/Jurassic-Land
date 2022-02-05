@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sculpt January 2021: Dragon's Egg
+* source:	https://sketchfab.com/3d-models/sculpt-january-2021-dragons-egg-26f24f5defe740ad8964d3fb8f81b6b0
+* author:	Arturo J. Real (https://sketchfab.com/arturojreal)
+
+Model License:
+* license type:	CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions must have the same license.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sculpt January 2021: Dragon's Egg" (https://sketchfab.com/3d-models/sculpt-january-2021-dragons-egg-26f24f5defe740ad8964d3fb8f81b6b0) by Arturo J. Real (https://sketchfab.com/arturojreal) licensed under CC-BY-NC-SA-4.0 (http://creativecommons.org/licenses/by-nc-sa/4.0/)

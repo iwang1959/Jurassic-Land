@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.2.0/dist/aframe-environment-component.min.js"></script>
+    <script src="model.js"></script>
+    <script src="dinosaur.js"></script>
+    <!-- Model Resources
+      https://supermedium.com/aframe-environment-component/ 
+      https://aframe.io/docs/1.0.0/introduction/models.html
+      https://www.khronos.org/gltf/
+      https://github.com/KhronosGroup/glTF-Sample-Models
+      https://github.com/donmccurdy/aframe-extras
+      https://github.com/supermedium/aframe-environment-component
+    -->
+  </head>
+  <body>
+    <a-scene id="scene1">
+    <a-camera pointer-lock-enabled="true" position = "0 2 0" camera look-controls wasd-controls = 
+      "acceleration: 100; fly: true">
+      <a-cursor></a-cursor>
+      <a-text value="Collect the dinosaur eggs" position = "-8 5 -8"></a-text>
+      </a-camera>
+
+      <a-assets>
+        <a-assets-item id="egg" src = "egg/scene.gltf"></a-assets-item>
+        <a-assets-item id="ptero" src = "Cesium_Air.glb"></a-assets-item>
+
+      </a-assets>
+
+
+       <a-gltf-model id="#egg" position = "0 10 -5" animation-mixer visible = true></a-gltf-model>
+       <a-gltf-model id="#ptero" position = " 0 10 -5" animation-mixer></a-gltf-model>
+
+     
+      <a-entity environment = "preset:forest"></a-entity>
+
+
+
+
+    </a-scene>
+  </body>
+</html>
